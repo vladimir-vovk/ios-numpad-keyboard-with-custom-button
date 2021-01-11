@@ -1,11 +1,8 @@
 {
   "expo": {
-    "name": "The iOS Numpad Keyboard with a Custom Button Example",
+    "name": "The iOS Numpad Keyboard with a Custom Button",
     "slug": "ios-numpad-with-custom-button",
-    "description": "An example of using React Native InputAccessoryView",
-    "privacy": "public",
-    "sdkVersion": "36.0.0",
-    "platforms": ["ios", "android", "web"],
+    "description": "An example of using React Native InputAccessoryView component to create custom keyboard buttons.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +17,15 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     }
   }
 }

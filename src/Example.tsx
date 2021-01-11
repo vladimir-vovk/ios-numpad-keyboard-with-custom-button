@@ -9,7 +9,8 @@ import {
   View,
   Text,
   TextInput,
-  StyleSheet
+  StyleSheet,
+  Alert
 } from 'react-native'
 
 const Example = () => {
@@ -19,6 +20,10 @@ const Example = () => {
   const _first = parseFloat(firstNumber) || 0
   const _second = parseFloat(secondNumber) || 0
   const _total = _first + _second
+
+  const onHey = () => {
+    Alert.alert('Hey!', 'This button could do anything you want.')
+  }
 
   return (
     <>
@@ -54,6 +59,7 @@ const Example = () => {
         <>
           <InputAccessoryView nativeID="Next">
             <View style={styles.accessory}>
+              <Button onPress={onHey} title="👋" />
               <Button
                 onPress={() => secondNumberRef.current.focus()}
                 title="Next"
@@ -62,6 +68,7 @@ const Example = () => {
           </InputAccessoryView>
           <InputAccessoryView nativeID="Done">
             <View style={styles.accessory}>
+              <Text>You could have different sets of buttons -> </Text>
               <Button onPress={() => Keyboard.dismiss()} title="Done" />
             </View>
           </InputAccessoryView>
@@ -78,7 +85,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16
   },
   title: {
-    marginVertical: 44,
+    marginVertical: 64,
     fontSize: 18,
     letterSpacing: 1.5,
     fontWeight: '500',
@@ -122,8 +129,9 @@ const styles = StyleSheet.create({
   accessory: {
     width: Dimensions.get('window').width,
     height: 48,
-    alignItems: 'flex-end',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
     backgroundColor: '#F8F8F8',
     paddingHorizontal: 8
   }
