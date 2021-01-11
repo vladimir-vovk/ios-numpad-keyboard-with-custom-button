@@ -2,7 +2,7 @@
 
 An example of using React Native [InputAccessoryView](https://facebook.github.io/react-native/docs/inputaccessoryview).
 
-The InputAccessoryView is a component which enables customization of the keyboard input accessory view on iOS. The input accessory view is displayed above the keyboard whenever a TextInput has focus. This component can be used to create custom toolbars.
+The InputAccessoryView is a component that enables customization of the keyboard input accessory view on iOS. The input accessory view is displayed above the keyboard whenever a TextInput has focus. This component can be used to create custom toolbars.
 
 <img src="./screen.gif" width="300"></img>
 
